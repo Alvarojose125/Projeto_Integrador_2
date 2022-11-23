@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+   /*border: 0.1px solid red;*/
+}
+/*teste de modificaçao*/
+
+.imagens img{
+    -webkit-transition: -webkit-transform: .5s ease;
+    transition: transform .5s ease;;
+}
+
+.imagens img:hover{
+    -webkit-trasnform: scale(1.1);
+    transform: scale(1.1);
+}
+/*teste de modificacao*/
+
+body{
+    background-color: whitesmoke; 
+}
+
+.linha {
+    width: 100%;
+    height: 6px;
+    background: #e3f703;
+    margin-top: 1px;
+
+}
+.menu{
+    
+    width: 100%;
+    position:fixed;
+    margin-top: -12px;
+}
+/*cabeçalho do cardapio*/
+.header{
+    width: 100%;
+    height: 80px;
+    background: #d90404;
+    padding: 10px;    
+}
+
+.topo{
+    text-align: right;
+    margin-right: 50px;
+}
+.logop img{
+    float: left;
+    height: 80px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    
+}
+.topo ul{
+    width: 100%;
+    position: absolute;
+    margin-left: 0px;
+}
+
+.topo ul li{
+display: inline-block;
+margin-left: 30px;
+margin-top: 20px;
+}
+
+.topo ul li a{
+    text-decoration: none;
+    display: flex;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 15px;
+}
+.topo ul  img{
+    display: flex;
+    margin-right: 100px;
+}
+.topo ul li a:hover{
+    color: yellow;
+}
+
+.contato{
+    background-color: #d90404;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    
+    
+}
+.contato option{
+    background-color: #d90404;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.contato:hover{
+    color: yellow;
+}
+
+/*fim cabeçalho do cardapio*/
+
+.subM{
+    display: flex;
+    margin-top: 10px;
+    padding-top: 150px;
+}
+
+.subM h1 { 
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:auto;
+    color: #d90404;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: black 1px 1px 4px;
+    padding: 15px;
+}
+
+.nome_sub_titulo {
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.nome_sub_titulo h2 {
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.nome_sub_titulo h3{
+    text-align: center;
+    padding: 15px;
+}
+.imagens{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+    
+}
+
+.imagens div {
+   margin-right: 20px;
+   padding: 30px;
+   max-width: 250px;
+
+}
+
+/*scrow das teclas de seleçao de pedidos*/
+.imagens div h4 a {
+    background-color: green;
+    padding: 10px ;
+    color: white;
+    font-family: arial;
+    line-height: 40px;
+    font-size: 15px;
+    text-decoration: none;
+    flex: none;
+}
+
+.imagens div h4 :hover{
+    background-color: red;
+    color: white;
+    transition: 0.8 all;
+}
+
+/*fim scrow das teclas de seleçao de pedidos*/
+
+.imagens img{
+    width: 280px;
+    height: 220px;
+    margin: 0 auto 0 auto;
+}
+
+.imagens div h6{
+    font-size: 10px;
+}
+
+.imagens div h3{
+       font-size: 18px;
+       white-space: nowrap;
+       padding: 0 0 10px 0;
+       text-align:center;
+       background: #d62a1e;
+       color: white;
+       font-weight: bold;
+       width: 280px;
+       height:20px;
+       margin: 0 auto 0 auto;
+}
+.imagens div p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold ;
+    margin-bottom: 8px;
+}
+/*scrow de bebidas*/
+
+.slide h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #d90404;
+    font-family: arial;
+    text-shadow: black 1px 1px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.slide p{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color:green;
+    font-family: arial;
+    text-shadow: black 1px 1px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.itens{
+    display: flex;
+    overflow-x: auto;
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+}
+
+.itens img{
+    margin-top: 10px;
+    width: 100%;
+    height: 150px;
+    margin-left: -30px;
+    -webkit-transition: -webkit-transform: .5s ease;
+    transition: transform .5s ease;;
+}
+
+.itens img:hover{
+    -webkit-trasnform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.slide{
+    flex: none;
+}
+
+/*fim scrow de bebidas*/
+
+.gua{
+    white-space: nowrap;
+    font-size:18px ;
+}
+
+.iconecarrinho{
+    max-width: 28px;
+}
+
+.doce{
+    font-size: 20px;
+   
+}
+
+.footer{
+    background-color: #d90404;
+    height: 90px;
+    width: 100%;
+    margin-top: 30px;
+}
+.rodape h1{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+}
+.rodape h2{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.rodape h5{
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+.one2{
+    width: 100%;
+    height: 4px;
+    background: #e3f703;
+}
