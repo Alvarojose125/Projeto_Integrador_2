@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
@@ -38,16 +39,19 @@
             <label for="email_login">Insira a senha</label>
             <input id="email_login" name="senha" required="required" type="password" placeholder="ex. senha" /> 
           </p>
-           
           <p> 
             <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
             <label for="manterlogado">Manter-me logado</label>
           </p>
            
           <p> 
-            <input type="submit" value="Logar">
+            <input type="submit" value="Logar" name="submit">
           </p>
-           
+          <?php
+          if(isset($_SESSION['msg']))
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        ?> 
           <p class="link">
             Ainda não tem conta?
             <a href="cadastro.php">Cadastre-se</a>

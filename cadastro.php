@@ -1,7 +1,6 @@
 <?php 
 session_start();
 ?>
-
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
@@ -77,14 +76,15 @@ session_start();
           </p>
 
           <p> 
-            <input type="submit" value="Cadastrar"/> 
+            <input type="submit" value="Cadastrar" name="submit" /> 
           </p>
-           <?php 
-           if ( isset($_SESSION['mensagem'])) {
-                echo $_SESSION['mensagem'];
-                unset ($_SESSION['mensagem']);
-           }
-           ?>
+          <div id="container_msg">
+           <?php
+          if(isset($_SESSION['msg'])){
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+          }
+        ?>
           <p class="link">  
             Já tem conta?
             <a href="login.php"> Ir para Login </a>

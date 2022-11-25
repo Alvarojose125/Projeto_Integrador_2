@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <HEAD>
@@ -31,9 +35,13 @@
                        <option> (81)3543-0912 </option>
                        <option> (81)3543-1671 </option>
                    </select>
+                   <li>
+                    <h2><?php echo @$_SESSION['nome'];?></h2>
+                    <h2><a href="logout.php">Sair</a></h2></li>
              </li>       
           <li><a href="#"><img class="iconecarrinho"  src="img/carrinho.png" alt="icone de carrinho"></a></li>
       </ul>
+      
   </nav>
   </div>
 </header>

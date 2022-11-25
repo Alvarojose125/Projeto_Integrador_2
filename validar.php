@@ -1,33 +1,32 @@
 <?php
+require_once("conexao.php");
+session_start();
 
-include('conexao.php');
+$cpf       = $_POST['cpf'];
+$senha     = $_POST['senha'];
+$pwdMD5    = md5($senha);
+$btn_cad   = $_POST['submit'];
 
-
-$cpf =  $_POST['cpf'];
-$senha = $_POST['senha'];
-$pwdMD5 = md5($senha);
-
-$query = "SELECT CPF, SENHA, NOME FROM clientes";
-$result = mysqli_query($conn, $query);
+$query = "SELECT * FROM client WHERE CPF = '$cpf' AND SENHA = '$pwdMD5'";
+$result = mysqli_query($conn, $query) or die("ERRO AO SELECIONAR DADOS");
 $row = mysqli_fetch_assoc($result);
 
+//echo $row['CPF'];
 
-if (empty($cpf) == false && empty($senha) == false) {
+if (!empty($btn_cad) && !empty($cpf) && !empty($senha)) {
 
-if ($row["CPF"] == $cpf && $row["SENHA"] == $pwdMD5) {
-  
-  		session_start();
-  		$_SESSION['nome'] = $row["NOME"];
+	if (mysqli_num_rows($result)<=0){
+        $_SESSION['msg'] = "<div style='text-align:center''>CPF OU SENHA NĀO CONFEREM</div>";
+		header('location: login.php');
+      }else{
 
- 		 header('Location: painel.php');
+        $_SESSION['id'] = $row['ID'];
+		$_SESSION['nome'] = $row['NOME'];
+		header('location: cardapio.php');
 
-		}else {
-  			echo "Usuario nao encontrado no DB";
-  			header('Location: index.php');
-		}
+      }	
 
-} 
-
-
-
-
+}else{
+	$_SESSION['msg'] = "<div style='text-align:center'>ENTRE COM SEUS DADOS</div>";
+	header('location: login.php');
+}
