@@ -18,7 +18,7 @@ $btn_cad   = $_POST['submit'];
 //Essa função e para grantir que senhas sejam iquais 
 
 if ($senha === $senharep) {
-    // ele criptocrafia a senha
+    // ele criptografia a senha
 	$senhaMD5 = md5($senha); 
 
 }
